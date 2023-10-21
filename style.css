@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap");
+
+:root {
+  --orange-color: #da722c;
+  --dark-color: #023047;
+  --dark-blue-color: #057ada;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
+  --poppins: "poppins", sans-serif;
+  --raleway: "Raleway", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--poppins);
+}
+
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+/* ================================Buttons design======================================= */
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn.dark {
+  background: var(--dark-color);
+}
+
+.light {
+  background-color: var(--orange-color);
+}
+
+.btn.enroll-icon::before {
+  content: url("img/enroll-icon.svg");
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.btn.enroll-icon {
+  padding-left: 60px;
+}
+
+/* ================================Header section design======================================= */
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 36px;
+  z-index: 99;
+}
+
+nav .logo {
+  color: #fff;
+  font-family: var(--raleway);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  font-family: var(--poppins);
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================================Hero section design======================================= */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-section .left {
+  flex: 1;
+}
+
+.hero-section .left h1 {
+  color: #fff;
+  font-family: var(--raleway);
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 125%;
+}
+
+.hero-section .left p {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  margin-bottom: 30px;
+  width: 457px;
+}
+
+.hero-section .right {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.hero-section .right img {
+  height: 590px;
+  vertical-align: middle;
+}
+
+/* ================================Achivment card desige======================================= */
+/* .achivment-cards{
+    position: relative;
+} */
+.achivment-card {
+  position: absolute;
+  min-width: 200px;
+}
+
+.achivment-card .content {
+  border-radius: 24px;
+  background: #fff;
+  padding: 8px 32px;
+  position: relative;
+  z-index: 10;
+}
+
+.achivment-card h3 {
+  color: var(--dark-color);
+  font-family: var(--poppins);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.achivment-card p {
+  color: var(--dark-color);
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.achivment-card .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  left: 8px;
+  top: 8px;
+  z-index: 1;
+}
+
+.achivment-card.student-enroll {
+  left: 45%;
+  top: 260px;
+}
+
+.achivment-card.overoll-ratting .center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.achivment-card.overoll-ratting {
+  left: 40%;
+  top: 500px;
+}
+
+/* ================================Testimonial setion design======================================= */
+
+section {
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--dark-color);
+  font-family: var(--raleway);
+  font-size: 60px;
+  line-height: 120%;
+  font-weight: 900;
+  margin-block: 0;
+}
+
+h2.light {
+  color: #fff;
+  background-color: transparent;
+}
+
+section p {
+  color: var(--dark-color);
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  /* 32px */
+  margin: 12px 0;
+}
+
+.testimonial-section {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.testimonial-section .mobile-btn {
+  display: none;
+}
+
+.testimonial-card {
+  gap: 15px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 442px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #fff;
+  border: 2px solid red;
+}
+
+/* .testimonial-section .testimonial-card::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 500px;
+  background-color: var(--dark-color);
+  left: 60px;
+  top: -50px;
+  border-radius: 24px;
+  z-index: -1000;
+}
+
+
+.testimonial-section .testimonial-card:last-child::before {
+  left: 40px;
+} */
+.testimonial-section .testimonial-card .content {
+  color: #fff;
+  width: 100%;
+  font-family: var(--raleway);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 150%;
+  border-radius: 24px;
+  background: #6f7dfb;
+  padding: 24px 34px;
+}
+
+.testimonial-card .content-bg-orange {
+  background-color: var(--orange-color) !important;
+}
+
+.testimonial-card .info {
+  padding: 24px 32px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+
+.testimonial-section .testimonial-card .info h4 {
+  color: #023047;
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
+  margin: 5px 0;
+}
+
+.testimonial-section .testimonial-card .info p.company {
+  color: var(--dark-color);
+  font-family: var(--raleway);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.testimonial-section .testimonial-card img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+}
+
+.testimonial-section .testimonial-card:last-child {
+  transform: translateX(20px);
+}
+
+.achivment-card .features {
+  margin-bottom: 20px;
+}
+
+.testimonial-section .testimonial-card::before {
+  content: "";
+  background-color: var(--dark-color);
+  width: 28px;
+  height: 130%;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -999;
+  border-radius: 24px;
+}
+
+.testimonial-section .testimonial-card:last-child:before {
+  left: 40px;
+  /* display: none; */
+}
+
+/* ======================End of testimonial section Design=================================== */
+
+/* ======================Course section Design=================================== */
+
+.course-section {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  padding: 70px 0;
+}
+
+.course-section h2 {
+  text-align: center;
+}
+
+.course-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.course-card {
+  padding: 0px 32px;
+  background-color: #fff;
+  border-radius: 24px;
+  margin: 40px 0;
+  flex-basis: 50%;
+  position: relative;
+}
+
+.course-card img {
+  width: 100%;
+}
+
+.course-card h3 {
+  color: var(--dark-color);
+  font-family: var(--raleway);
+  font-size: 30px;
+  font-weight: 900;
+  position: relative;
+  line-height: 150%;
+}
+
+.course-section .course-card .info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-section .course-card .duration {
+  color: #023047;
+  font-family: var(--dark-color);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 150%;
+}
+
+.course-card::after {
+  background-color: var(--dark-color);
+  content: "";
+  width: 90%;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+}
+
+/* ======================End of Course section Design=================================== */
+.app-section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.app-section .section-title h3 {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: var(--raleway);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.app-section .section-title p {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.app-section .app-btns {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-section .app-btns .app-btn {
+  background: #000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 32px;
+  color: #fff;
+}
+
+/* ======================Footer section Design========================================== */
+footer {
+  padding: 100px 0;
+  background: #070917;
+}
+
+.links-container {
+  display: flex;
+  gap: 20px;
+}
+
+footer .links-container .links {
+  width: 100%;
+}
+
+footer .links-container .links h3 {
+  color: var(--orange-color);
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 14px;
+}
+
+footer .links-container .links ul li {
+  margin-bottom: 10px;
+}
+
+footer .links-container .links ul li a {
+  color: #fff;
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+}
+
+footer .links-container .links .social a img {
+  margin-right: 28px;
+  width: 24px;
+  height: 24px;
+}
+
+footer .links-container .links form {
+  width: 521px;
+  height: 39px;
+  background: #fff;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 8px;
+}
+
+footer .links-container .links form input[type="email"] {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 5px 15px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  position: relative;
+}
+
+footer .links-container .links form .subscribe-btn {
+
+  background-color: var(--dark-color);
+  color: #FFF;
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  padding: 4px 8px;
+}
+
+/* ======================End of Footer section Design=================================== */
+
