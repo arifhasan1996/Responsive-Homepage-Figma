@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
     <title>Document</title>
   </head>
   <body>
     <!-- ====================Header section============================= -->
     <header>
       <div class="wrapper">
-        <nav>
+        <nav class="">
           <div class="logo">GD.</div>
           <ul>
             <li>
@@ -28,6 +29,33 @@
           </ul>
         </nav>
         <!-- ===========End Of desktop nav menu============ -->
+        <nav class="mobile-nav">
+          <div class="logo">GD.</div>
+          <div class="menu-icon">
+            <img src="img/navbar.png" alt="">
+          </div>
+        </nav>
+
+        <div class="mobile-menu-container">
+          <div class="close-icon">
+            <img src="img/close-bar.png" alt="">
+          </div>
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Seervice</a>
+            </li>
+            <li>
+              <a href="#">Our work</a>
+            </li>
+            <li>
+              <a href="#" class="btn dark">Enroll Now</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end of mobile menu navigataion -->
 
         <div class="hero-section">
           <div class="left">
@@ -128,14 +156,14 @@
             <img src="img/courese-1.png" alt="" />
             <div class="info">
               <h3>Game Design Essentials</h3>
-              <div class="duration">8Hrs</div>
+              <div class="duration"><img src="img/clock.png" alt="clock-icon"> 8Hrs</div>
             </div>
           </div>
           <div class="course-card">
             <img src="img/courese-2.png" alt="" />
             <div class="info">
               <h3>Unity Game Engine Fundamentals</h3>
-              <div class="duration">15Hrs</div>
+              <div class="duration"><img src="img/clock.png" alt="clock-icon">15Hrs</div>
             </div>
           </div>
         </div>
@@ -201,7 +229,7 @@
           <div class="links">
             <h3>Contact us</h3>
             <ul>
-              <li>contact@email.com</li>
+              <li class="email">contact@email.com</li>
               <div class="social">
                 <a href="#">
                   <img src="img/fb.png" alt="" />
@@ -216,8 +244,9 @@
               </form>
             </ul>
           </div>
-          <p class="copiright">This website is developed by GTCoding © 2021</p>
         </div>
+        
+        <p class="copiright">This website is developed by GTCoding © 2021</p>
       </div>
     </footer>
 

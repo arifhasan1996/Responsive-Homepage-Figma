@@ -73,8 +73,18 @@ nav {
   align-items: center;
   position: fixed;
   width: 1134px;
-  top: 36px;
+  top: 0px;
   z-index: 99;
+  padding: 36px 0;
+}
+
+nav.scroll{
+  background: #000;
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  transition: all 500ms ease;
+
 }
 
 nav .logo {
@@ -100,6 +110,10 @@ nav ul li a {
   font-weight: bold;
 }
 
+nav.mobile-nav{
+  display: none;
+}
+
 /* ================================Hero section design======================================= */
 .hero-section {
   display: flex;
@@ -107,6 +121,7 @@ nav ul li a {
   justify-content: space-between;
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .hero-section .left {
@@ -142,9 +157,9 @@ nav ul li a {
 }
 
 /* ================================Achivment card desige======================================= */
-/* .achivment-cards{
+.achivment-cards{
     position: relative;
-} */
+}
 .achivment-card {
   position: absolute;
   min-width: 200px;
@@ -244,7 +259,7 @@ section p {
   display: none;
 }
 
-.testimonial-card {
+.testimonial-section .testimonial-card {
   gap: 15px;
   margin-bottom: 50px;
   display: flex;
@@ -355,7 +370,7 @@ section p {
 
 .course-section {
   background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
-  padding: 70px 0;
+  padding: 120px 0;
 }
 
 .course-section h2 {
@@ -366,6 +381,7 @@ section p {
   display: flex;
   justify-content: space-between;
   gap: 70px;
+  
 }
 
 .course-card {
@@ -403,7 +419,16 @@ section p {
   font-size: 16px;
   font-weight: 900;
   line-height: 150%;
+  display: flex;
+  align-items: center;
 }
+
+.course-section .course-card .duration img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
 
 .course-card::after {
   background-color: var(--dark-color);
@@ -417,7 +442,13 @@ section p {
   border-top-right-radius: 24px;
   border-top-left-radius: 24px;
 }
+.course-section .wrapper{
+}
 
+.course-section .wrapper .btn{
+  position: absolute;
+  right: 100px;
+}
 /* ======================End of Course section Design=================================== */
 .app-section {
   padding: 100px 0;
@@ -447,7 +478,7 @@ section p {
 
 .app-section .app-btns {
   display: flex;
-  gap: 12px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -456,9 +487,11 @@ section p {
   background: #000;
   display: flex;
   align-items: center;
+  border-radius: 24px;
   gap: 14px;
   padding: 20px 32px;
   color: #fff;
+  min-width: 310px;
 }
 
 /* ======================Footer section Design========================================== */
@@ -467,16 +500,13 @@ footer {
   background: #070917;
 }
 
-.links-container {
-  display: flex;
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
   gap: 20px;
 }
 
-footer .links-container .links {
-  width: 100%;
-}
-
-footer .links-container .links h3 {
+footer h3 {
   color: var(--orange-color);
   font-family: var(--poppins);
   font-size: 18px;
@@ -485,27 +515,43 @@ footer .links-container .links h3 {
   margin-bottom: 14px;
 }
 
-footer .links-container .links ul li {
-  margin-bottom: 10px;
+footer  ul {
+  padding: 0;
+  list-style: none;
+
 }
 
-footer .links-container .links ul li a {
+footer ul li {
+  margin: 10px;
+  color: #FFF;
+
+}
+
+footer ul li a {
   color: #fff;
   font-family: var(--poppins);
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   display: block;
+  color: #FFF;
+
 }
 
-footer .links-container .links .social a img {
+footer .links-container .links .email {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer a img {
   margin-right: 28px;
   width: 24px;
   height: 24px;
 }
 
-footer .links-container .links form {
-  width: 521px;
+footer form {
+  width: 100%;
   height: 39px;
   background: #fff;
   margin-top: 10px;
@@ -513,21 +559,20 @@ footer .links-container .links form {
   border-radius: 8px;
 }
 
-footer .links-container .links form input[type="email"] {
+footer form input{
   height: 100%;
   width: 100%;
   border: 0;
   outline: none;
   padding: 5px 15px;
   color: #000;
-  font-family: Poppins;
+  font-family: var(--poppins);
   font-size: 16px;
   font-weight: 400;
   border-radius: 8px;
-  position: relative;
 }
 
-footer .links-container .links form .subscribe-btn {
+footer form .subscribe-btn {
 
   background-color: var(--dark-color);
   color: #FFF;
@@ -540,8 +585,18 @@ footer .links-container .links form .subscribe-btn {
   position: absolute;
   right: 4px;
   top: 4px;
-  padding: 4px 8px;
 }
 
+footer .copiright {
+  color: #FFF;
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+
 /* ======================End of Footer section Design=================================== */
+
 
