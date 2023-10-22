@@ -126,6 +126,7 @@ nav.mobile-nav{
 
 .hero-section .left {
   flex: 1;
+  padding-top: 50px;
 }
 
 .hero-section .left h1 {
@@ -271,7 +272,6 @@ section p {
   box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.2);
   position: relative;
   background: #fff;
-  border: 2px solid red;
 }
 
 /* .testimonial-section .testimonial-card::before {
@@ -442,9 +442,6 @@ section p {
   border-top-right-radius: 24px;
   border-top-left-radius: 24px;
 }
-.course-section .wrapper{
-}
-
 .course-section .wrapper .btn{
   position: absolute;
   right: 100px;
@@ -595,7 +592,9 @@ footer .copiright {
 }
 
 
-
+.mobile-menu-container{
+  display: none;
+}
 
 /* ======================End of Footer section Design=================================== */
 
